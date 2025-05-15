@@ -216,6 +216,6 @@ export const navItems = [
     {
       id: 3,
       img: "/link.svg",
-      link: "www.linkedin.com/in/anuoluwapo-akinlawon"
+      link: "https://linkedin.com/in/anuoluwapo-akinlawon"
     },
   ];
