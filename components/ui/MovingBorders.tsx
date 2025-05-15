@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import React, { ReactNode, ElementType, ComponentPropsWithRef } from "react";
 import {
@@ -85,7 +86,7 @@ export const MovingBorder = ({
   ry?: string;
   [key: string]: any;
 }) => {
-  const pathRef = useRef<any>();
+  const pathRef = useRef<any>(0);
   const progress = useMotionValue<number>(0);
 
   useAnimationFrame((time) => {
