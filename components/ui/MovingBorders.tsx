@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
-import React, { ReactNode, ElementType, ComponentPropsWithRef } from "react";
+import React from "react";
 import {
   motion,
   useAnimationFrame,
@@ -11,36 +11,33 @@ import {
 import { useRef } from "react";
 import { cn } from "@/lib/utils";
 
-type ButtonProps<C extends ElementType = "button"> = {
-  borderRadius?: string;
-  children?: ReactNode;
-  as?: C;
-  containerClassName?: string;
-  borderClassName?: string;
-  duration?: number;
-  className?: string;
-} & ComponentPropsWithRef<C>;
-
-export function Button<C extends ElementType = "button">({
+export function Button({
   borderRadius = "1.75rem",
   children,
-  as,
+  as: Component = "button",
   containerClassName,
   borderClassName,
   duration,
   className,
   ...otherProps
-}: ButtonProps<C>) {
-  const Component = as || "button";
-
+}: {
+  borderRadius?: string;
+  children: React.ReactNode;
+  as?: any;
+  containerClassName?: string;
+  borderClassName?: string;
+  duration?: number;
+  className?: string;
+  [key: string]: unknown;
+}) {
   return (
     <Component
       className={cn(
         "relative md:col-span-2 overflow-hidden bg-transparent p-[1px] text-xl",
-        containerClassName
+        containerClassName,
       )}
       style={{
-        borderRadius,
+        borderRadius: borderRadius,
       }}
       {...otherProps}
     >
@@ -52,7 +49,7 @@ export function Button<C extends ElementType = "button">({
           <div
             className={cn(
               "h-20 w-20 bg-[radial-gradient(#0ea5e9_40%,transparent_60%)] opacity-[0.8]",
-              borderClassName
+              borderClassName,
             )}
           />
         </MovingBorder>
@@ -61,7 +58,7 @@ export function Button<C extends ElementType = "button">({
       <div
         className={cn(
           "relative flex h-full w-full items-center justify-center border border-slate-800 bg-slate-900/[0.8] text-sm text-white antialiased backdrop-blur-xl",
-          className
+          className,
         )}
         style={{
           borderRadius: `calc(${borderRadius} * 0.96)`,
@@ -86,7 +83,7 @@ export const MovingBorder = ({
   ry?: string;
   [key: string]: any;
 }) => {
-  const pathRef = useRef<any>(0);
+  const pathRef = useRef<any>(null);
   const progress = useMotionValue<number>(0);
 
   useAnimationFrame((time) => {
