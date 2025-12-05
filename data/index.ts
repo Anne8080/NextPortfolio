@@ -1,6 +1,7 @@
 export const navItems = [
     { name: "About", link: "#about" },
     { name: "Projects", link: "#projects" },
+    { name: "Accomplishments", link: '#accomplishments'},
     { name: "Experience", link: "#experience" },
     { name: "Contact", link: "#contact" },
   ];
@@ -8,12 +9,12 @@ export const navItems = [
   export const gridItems = [
     {
       id: 1,
-      title: "I prioritize client collaboration, fostering open communication ",
+      title: "",
       description: "",
       className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
-      imgClassName: "w-full h-full",
+      imgClassName: "w-full h-full object-top",
       titleClassName: "justify-end",
-      img: "/b1.svg",
+      img: "/hello_world.jpg",
       spareImg: "",
     },
     {
@@ -28,7 +29,7 @@ export const navItems = [
     },
     {
       id: 3,
-      title: "My tech stack",
+      title: "My Tech Stack",
       description: "I constantly try to improve",
       className: "lg:col-span-2 md:col-span-3 md:row-span-2",
       imgClassName: "",
@@ -49,12 +50,12 @@ export const navItems = [
   
     {
       id: 5,
-      title: "Currently studying for CompTia Security +",
-      description: "The Inside Scoop",
+      title: "Perparing to start TryHackMe labs",
+      description: "Current activities",
       className: "md:col-span-3 md:row-span-2",
-      imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
+      imgClassName: "absolute right-0 bottom-10 md:w-96 w-60",
       titleClassName: "justify-center md:justify-start lg:justify-center",
-      img: "/comptia.png",
+      img: "/tryhackme.png",
       spareImg: "/grid.svg",
     },
     {
@@ -80,16 +81,16 @@ export const navItems = [
     },
     {
       id: 2,
-      title: "Ayaboard - Admin Dashboard",
-      des: "Modern admin dashboard for seamless goods tracking and business management.",
-      img: "/ayaboard.png",
-      iconLists: ["/re.svg", "/scss.svg", "/mui.svg"],
-      link: "https://ayaboard.netlify.app/",
+      title: "Telserve - ISP Website",
+      des: "A clean and responsive website showcasing ISP plans and support",
+      img: "/telserve.png",
+      iconLists: ["/re.svg", "/scss.svg", "/mui.svg", "/fm.svg"],
+      link: "https://telserve.netlify.app/",
     },
     {
       id: 3,
       title: "Net-Trix Cybersecurity - Cyber Security Portfolio",
-      des: "A hands-on portfolio demonstrating core skills in network security, SOC operations, and cyber defense.",
+      des: "A hands-on portfolio demonstrating core skills in network security, and cyber defense.",
       img: "/cybersecurity.png",
       iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/fm.svg"],
       link: "https://net-trix-cybersecurity.vercel.app/",

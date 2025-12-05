@@ -108,7 +108,7 @@ export const BentoGridItem = ({
             </div>
             <div className="flex flex-col gap-3">
               <span className="py-2 px-3 rounded-lg text-center bg-[#10132e]"></span>
-              {['Wireshark', 'Linux', 'Python'].map((item) => (
+              {['Burp Suite', 'Linux', 'Python'].map((item) => (
                 <span key={item} className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-50 rounded-lg text-center bg-[#10132e]">{item}</span>
               ))}
               
