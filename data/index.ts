@@ -54,7 +54,7 @@ export const navItems = [
       description: "Current activities",
       className: "md:col-span-3 md:row-span-2",
       imgClassName: "absolute right-0 bottom-10 md:w-96 w-60",
-      titleClassName: "justify-center md:justify-start lg:justify-center",
+      titleClassName: "justify-center md:justify-start lg:justify-center sm:w-full w-2/3",
       img: "/tryhackme.png",
       spareImg: "/grid.svg",
     },
